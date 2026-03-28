@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#featured {
+    grid-area: featured;
+}
+
+#featured img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#featured .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border-bottom: 10px solid var(--bg-color);
+    height: 100%;
+}
+
+#featured .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-color) 100%);
+}
+
+#featured .card figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+}
+
+#featured .card h2 {
+    margin-top: 8px;
+}
+
+#featured .card-2 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#featured .card-2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-color) 100%);
+}
+
+#featured .card-2 figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 12px;
+    padding-bottom: 25px;
+}
+
+#featured .card-2 h2 {
+    margin-top: 8px;
+    margin-bottom: -12px;
+}
+
+section header {
+    padding-block: 12px 24px;
+    border-top: 1px solid var(--stroke-color);
+    font: var(--text-span);
+    align-items: center;
+}
+
+section header h3 {
+    justify-self: start;
+    margin-top: 30px;
+}
+
+section header a {
+    margin-top: -25px;
+    justify-self: end;
+    gap: 8px;
+}
+
+section header a span {
+    background-image: url(../assets/icons/ArrowRight.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section header a:hover span {
+    background-image: url(../assets/icons/ArrowRight-hover.svg);
+}
+
+#weekly {
+    grid-area: weekly;
+}
+
+#weekly > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+#weekly img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+#weekly figure {
+    position: relative;
+    width: 100%;
+}
+
+#weekly .tag-content {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+#weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
+    display: -webkit-box;
+    max-height: 3rem;
+    -webkit-box-orient: vertical;
+    overflow-y: scroll;
+}
+
+.Image09 {
+    width: 100%;
+}
+
+#ai {
+    grid-area: ai;
+}
+
+#ai img {
+    width: 204px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#ai h3 {
+    margin-block: 8px 4px;
+}
+
+#more .tag-content {
+    margin-bottom: 7px;
+}
+
+#more img {
+    width: 114px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    #featured {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #featured .grid-cols-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    #weekly > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #featured .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    #weekly > div {
+        grid-template-columns: 1fr;
+    }
+
+    #weekly img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #featured .card figcaption {
+        padding: 16px;
+    }
+
+    #featured .card-2 figcaption {
+        padding: 10px;
+    }
+
+    #weekly figure p {
+        font-size: 0.9rem;
+    }
+}
