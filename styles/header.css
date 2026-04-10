@@ -1,32 +1,34 @@
-#primary{
-    padding-block: 20px;
+#primary {
+  padding-block: 20px;
+  padding-inline: 28px;
 
-    div{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    /* nesting css :*/
-    div:nth-child(2){
-        margin-inline: auto;
-    }
+  /* nesting css :*/
+  div:nth-child(2) {
+    margin-inline: auto;
+  }
 
-    div:nth-child(3){
-        justify-self: end;
-        /* color: red; */
-    }
+  div:nth-child(3) {
+    justify-self: end;
+    /* color: red; */
+  }
 
-    .logo{
-        width: 200px;
-    }
+  .logo {
+    width: 200px;
+  }
 }
 
-#secondary{
-    padding-block: 14px;
-    border: solid 1px var(--stroke-color);
-    border-inline: none;
-    padding-inline: 10px;
-    width: 100%;
-}
+#secondary {
+  padding-block: 14px;
+  border: solid 1px var(--stroke-color);
+  gap: -1rem;
+  border-inline: none;
+  padding-inline-start: 3rem;
+  padding-inline-end: -300rem !important;
 
+}
