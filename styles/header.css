@@ -21,6 +21,14 @@
   .logo {
     width: 200px;
   }
+
+  #botoes{
+    margin-right: 1rem;
+  }
+  button{
+    width: 5rem;
+    height: 2rem;
+  }
 }
 
 #secondary {
@@ -30,5 +38,47 @@
   border-inline: none;
   padding-inline-start: 3rem;
   padding-inline-end: -300rem !important;
+}
 
+#terceiro {
+  width: 100%;
+  overflow: hidden;
+  border-block: 1px solid var(--stroke-color);
+  padding-block: 1rem;
+}
+
+#terceiro .faixa {
+  display: flex;
+  width: max-content;
+
+  animation: slideHorizontal 40s linear infinite;
+}
+
+#terceiro .faixa a {
+  white-space: nowrap;
+  font-weight: 600;
+  border-right: 1px solid white;
+  padding-inline: 1rem;
+}
+
+.dolar:hover {
+  color: rgb(255, 0, 0);
+}
+.euro:hover {
+  color: rgb(19, 71, 156);
+}
+.libra:hover {
+  color: rgb(33, 158, 43);
+}
+  .etec:hover {
+    color: rgb(200, 185, 70) !important;
+  }
+
+@keyframes slideHorizontal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
